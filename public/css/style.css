@@ -1,0 +1,100 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	font-family: 'Inter', sans-serif;
+	font-size: 1.6rem;
+	color: #121417;
+	background-color: #ffffff;
+}
+
+.section {
+	padding: 2rem;
+}
+.section h1 {
+	text-align: center;
+	margin: 1rem 0;
+	font-size: 3.2rem;
+}
+
+.button {
+	padding: 1.5rem 6rem;
+	text-decoration: none;
+	color: #ffffff;
+	background-color: #1a80e5;
+	border-radius: 12px;
+	text-align: center;
+	border: 1px solid transparent;
+	transition: background-color 0.3s;
+	cursor: pointer;
+}
+.button:hover {
+	background-color: #52a7fc;
+}
+
+.my-tasks {
+	max-width: 600px;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+.my-tasks__lists {
+	margin-top: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+.my-tasks__box {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: 2rem;
+	background-color: #fafafa;
+	border-radius: 12px;
+}
+.my-tasks__box h3 {
+	font-size: 1.6rem;
+}
+.my-tasks__box h4 {
+	font-size: 1.4rem;
+	color: #637587;
+	font-weight: normal;
+}
+
+.back {
+	padding: 3rem;
+	display: block;
+	text-decoration: none;
+	color: #121417;
+	text-align: center;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+.form input,
+.form textarea {
+	padding: 1rem 2rem;
+	border-radius: 10px;
+	border: 1px solid #1a80e5;
+	font-size: 1.6rem;
+	font-family: 'Inter', sans-serif;
+	resize: vertical;
+	color: #121417;
+}
