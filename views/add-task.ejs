@@ -16,9 +16,9 @@
         <section class="section new-task">
             <h1>New Task</h1>
             <form action="/add-task" method="post" class="form">
-                <input type="text" placeholder="Title" name="title">
-                <textarea cols="30" rows="10" placeholder="Message" name="message"></textarea>
-                <input type="date" name="date">
+                <input type="text" placeholder="Title" name="title" required>
+                <textarea cols="30" rows="10" placeholder="Message" name="message" required></textarea>
+                <input type="date" name="date" required>
                 <button class="button" type="submit">Add New Task</button>
             </form>
             <a href="/" class="back">Back</a>

@@ -16,33 +16,23 @@
         <section class="section my-tasks">
             <h1>My Tasks</h1>
             <a href="/add-task" class="button">New Task</a>
-
-            <div class="my-tasks__lists">
-                <div class="my-tasks__box">
-                    <h3>Finish UI designs for mobile app</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum laudantium iure minus voluptate
-                        hic dolorum vitae optio distinctio facilis cumque!</p>
-                    <h4>Due on 12/15/2023</h4>
-                </div>
-                <div class="my-tasks__box">
-                    <h3>Prepare presentation for design team meeting</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum laudantium iure minus voluptate
-                        hic dolorum vitae optio distinctio facilis cumque!</p>
-                    <h4>Due on 12/20/2023</h4>
-                </div>
-                <div class="my-tasks__box">
-                    <h3>Create interactive prototype for new feature</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum laudantium iure minus voluptate
-                        hic dolorum vitae optio distinctio facilis cumque!</p>
-                    <h4>Due on 12/25/2023</h4>
-                </div>
-                <div class="my-tasks__box">
-                    <h3>Write detailed design specs for development team</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum laudantium iure minus voluptate
-                        hic dolorum vitae optio distinctio facilis cumque!</p>
-                    <h4>Due on 12/30/2023</h4>
-                </div>
-            </div>
+            <% if (tasks.length <=0){ %>
+                <p>No tasks</p>
+                <% } %>
+                    <div class="my-tasks__lists">
+                        <% for (const task of tasks) { %>
+                            <div class="my-tasks__box">
+                                <h3>
+                                    <%= task.title %>
+                                </h3>
+                                <p>
+                                    <%= task.message %>
+                                </p>
+                                <h4>Due on <%= task.date %>
+                                </h4>
+                            </div>
+                            <% } %>
+                    </div>
         </section>
     </main>
 </body>
